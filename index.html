@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Meal Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 1rem;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 2rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e2e2e2;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .day-plan {
+            margin-bottom: 1rem;
+        }
+        .day-checkbox {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>7-Day Meal Plan</h1>
+    </header>
+    <main>
+        <section id="checklist">
+            <h2>Day Checklist</h2>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day1" />
+                <label for="day1">Day 1</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day2" />
+                <label for="day2">Day 2</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day3" />
+                <label for="day3">Day 3</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day4" />
+                <label for="day4">Day 4</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day5" />
+                <label for="day5">Day 5</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day6" />
+                <label for="day6">Day 6</label>
+            </div>
+            <div class="day-checkbox">
+                <input type="checkbox" id="day7" />
+                <label for="day7">Day 7</label>
+            </div>
+            <button onclick="saveChecklist()">Save Progress</button>
+        </section>
+        <section id="meal-plan">
+            <h2>Daily Schedule (Days 1-4 and 6-7)</h2>
+            <div class="day-plan">
+                <h3>Breakfast</h3>
+                <ul>
+                    <li>4 Eggs scrambled with 1 cup of Frozen Kale sautéed in Olive Oil</li>
+                    <li>1 serving of Greek Yogurt</li>
+                    <li>1 scoop of MyProtein Advanced Whey</li>
+                </ul>
+            </div>
+            <div class="day-plan">
+                <h3>Morning Snack</h3>
+                <ul>
+                    <li>1 Can of Tuna (Days 1-4)</li>
+                    <li>1 scoop of MyProtein Advanced Whey (Days 5-7)</li>
+                    <li>1 Tbsp Peanut Butter</li>
+                </ul>
+            </div>
+            <div class="day-plan">
+                <h3>Lunch</h3>
+                <ul>
+                    <li>100g Grilled Chicken Breast (Days 1, 3, 5, 7)</li>
+                    <li>1 cup of Frozen Broccoli cooked with Olive Oil</li>
+                    <li>1 scoop of MyProtein Advanced Whey (Days 2, 4, 6)</li>
+                </ul>
+            </div>
+            <div class="day-plan">
+                <h3>Afternoon Snack</h3>
+                <ul>
+                    <li>2 Hard-Boiled Eggs</li>
+                    <li>1 serving of Greek Yogurt</li>
+                    <li>1 scoop of MyProtein Advanced Whey</li>
+                </ul>
+            </div>
+            <div class="day-plan">
+                <h3>Dinner</h3>
+                <ul>
+                    <li>100g Grilled Chicken Breast (Days 1, 3, 5, 7)</li>
+                    <li>1 cup of Frozen Broccoli cooked with Olive Oil</li>
+                    <li>2 scoops of MyProtein Advanced Whey (Days 2, 4, 6)</li>
+                </ul>
+            </div>
+        </section>
+        <section id="shopping-list">
+            <h2>Weekly Shopping List (Aldi)</h2>
+            <ul>
+                <li>Chicken Breast: 1kg (~£5.00)</li>
+                <li>Eggs: 3 dozen (~£3.75)</li>
+                <li>Canned Tuna: 4 cans (~£2.20)</li>
+                <li>Greek Yogurt: 1kg (~£2.80)</li>
+                <li>Peanut Butter: 300g (~£1.29)</li>
+                <li>Olive Oil: 250ml (~£1.25)</li>
+                <li>Frozen Kale: 500g (~£0.79)</li>
+                <li>Frozen Broccoli: 1kg (~£1.29)</li>
+                <li>MyProtein Advanced Whey: Enough for the week (~£6.00)</li>
+            </ul>
+        </section>
+        <section id="prep-tips">
+            <h2>Meal Prep Tips</h2>
+            <ul>
+                <li>Batch Cook Chicken Breast: Grill or bake 1kg of chicken breast and divide into 100g portions.</li>
+                <li>Prep Vegetables: Cook the frozen kale and broccoli and store in the fridge.</li>
+                <li>Boil Eggs: Boil 3 dozen eggs in advance.</li>
+                <li>Protein Shakes: Have enough MyProtein Advanced Whey for the week.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meal Plan</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load checklist state
+            for (let i = 1; i <= 7; i++) {
+                const checkbox = document.getElementById(`day${i}`);
+                checkbox.checked = localStorage.getItem(`day${i}`) === 'true';
+            }
+        });
+
+        function saveChecklist() {
+            // Save checklist state
+            for (let i = 1; i <= 7; i++) {
+                const checkbox = document.getElementById(`day${i}`);
+                localStorage.setItem(`day${i}`, checkbox.checked);
+            }
+            alert('Progress saved!');
+        }
+    </script>
+</body>
+</html>
